@@ -11,10 +11,10 @@
         if (t) document.documentElement.className = t;
     </script>
 
-    <link rel="stylesheet" href="https://unpkg.com/open-props" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/open-props.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/open-props/normalize.min.css" />
     <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/themes.css" />
+    <link rel="stylesheet" href="/css/resume.css" />
 
     <script src="/js/theme-switcher.js" defer></script>
 </head>
@@ -43,16 +43,267 @@
             </select>
         </nav>
     </header>
-
     <main id="main-content">
-        <!-- Resume content goes here -->
-    </main>
+        <article class="resume">
+            <header class="resume-header">
+                <h1>Cameron McNamara</h1>
+                <ul class="resume-contact" role="list">
+                    <li><a href="mailto:cameronmcnamara@sandiego.edu">cameronmcnamara@sandiego.edu</a></li>
+                    <li><a href="https://linkedin.com/in/cameronmcnamara" target="_blank"
+                            rel="noopener">linkedin.com/in/cameronmcnamara</a></li>
+                    <li><a href="tel:9254747573">(925) 474-7573</a></li>
+                    <li>San Francisco Bay Area</li>
+                </ul>
+                <a href="/assets/McNamara_Cameron_Resume.pdf" download class="resume-download">Download PDF</a>
+            </header>
 
+            <!-- Education -->
+            <section class="resume-section">
+                <h2>Education</h2>
+
+                <article class="resume-entry">
+                    <resume-row>
+                        <hgroup>
+                            <h3>University of San Diego</h3>
+                            <p class="resume-role">BA Computer Science (Data Science & AI) · BBA Business Analytics</p>
+                            <p class="resume-detail">GPA: 3.98 · Presidential Merit Scholarship · Dean's List (All
+                                Semesters)</p>
+                            <p class="resume-detail">Coursework: Predictive Analytics, Data Visualization, Data
+                                Structures,
+                                Computer Systems, OOP, Modeling</p>
+                        </hgroup>
+                        <resume-meta>
+                            <span>San Diego, CA</span>
+                            <time datetime="2026-05">Expected May 2026</time>
+                        </resume-meta>
+                    </resume-row>
+                </article>
+
+                <article class="resume-entry">
+                    <resume-row>
+                        <hgroup>
+                            <h3>Universidad Pontificia Comillas</h3>
+                            <p class="resume-role">Semester Study Abroad</p>
+                        </hgroup>
+                        <resume-meta>
+                            <span>Madrid, Spain</span>
+                            <time datetime="2024-12">Fall 2024</time>
+                        </resume-meta>
+                    </resume-row>
+                </article>
+            </section>
+
+            <!-- Experience -->
+            <section class="resume-section">
+                <h2>Professional Experience</h2>
+
+                <article class="resume-entry">
+                    <resume-row>
+                        <hgroup>
+                            <h3>Cisco Systems</h3>
+                            <p class="resume-role">Data Analyst Intern</p>
+                        </hgroup>
+                        <resume-meta>
+                            <span>San Jose, CA</span>
+                            <time datetime="2025-05">May 2025</time> – <time datetime="2025-08">August 2025</time>
+                        </resume-meta>
+                    </resume-row>
+                    <ul>
+                        <li>Collaborated with the central forecasting team to design and implement an automated market
+                            data
+                            pipeline using TypeScript and automation tools, replacing manual workflows and reducing
+                            processing & analysis time by ~90%</li>
+                        <li>Led a data-driven logistics analysis using machine learning, causal inference, and
+                            predictive
+                            modeling to identify service delay drivers; achieved 82% ensemble model accuracy and
+                            delivered
+                            actionable business insights</li>
+                        <li>Developed and presented Python/Tableau dashboards for TAM, market share, and macroeconomic
+                            trends; partnered with technical and non-technical stakeholders to improve forecasting
+                            accuracy
+                            and strategic decisions</li>
+                    </ul>
+                </article>
+
+                <article class="resume-entry">
+                    <resume-row>
+                        <hgroup>
+                            <h3>Advanced Micro Devices (AMD)</h3>
+                            <p class="resume-role">Integrated Planning & Strategy Analytics Intern</p>
+                        </hgroup>
+                        <resume-meta>
+                            <span>Santa Clara, CA</span>
+                            <time datetime="2024-06">June 2024</time> – <time datetime="2024-08">August 2024</time>
+                        </resume-meta>
+                    </resume-row>
+                    <ul>
+                        <li>Monitored the Ryzen AI 8040 CPU Series launch through various lifecycle stages, leveraging
+                            sales
+                            forecasts, OEM consumption, POS data, and inventory analytics to create actionable insights
+                            and
+                            drive overall strategy</li>
+                        <li>Conducted market analysis including TAM and SAM, and performed marketing analytics such as
+                            Share
+                            of Voice (SOV) and Share of Shelf (SOS) to evaluate awareness, consumer preference, and
+                            market
+                            positioning</li>
+                        <li>Performed detailed competitive analysis benchmarking the Ryzen 8040 Series against key
+                            competitors, leveraging extensive datasets to uncover global market trends and refine
+                            strategic
+                            decision-making</li>
+                    </ul>
+                </article>
+
+                <article class="resume-entry">
+                    <resume-row>
+                        <hgroup>
+                            <h3>University of San Diego Men's Baseball</h3>
+                            <p class="resume-role">Analytics Manager</p>
+                        </hgroup>
+                        <resume-meta>
+                            <span>San Diego, CA</span>
+                            <time datetime="2023-02">February 2023</time> – <time datetime="2025-01">January 2025</time>
+                        </resume-meta>
+                    </resume-row>
+                    <ul>
+                        <li>Collected, compiled, and analyzed personal and team statistics for the USD D1 Baseball Team
+                        </li>
+                        <li>Created an R-based web app with ShinyApp to analyze, compile, and display pitching data from
+                            multiple game files</li>
+                        <li>Used Batts, Synergy, TruMedia, Excel, Trackman, and Rapsodo during over 40 games</li>
+                        <li>Worked closely with the team to discuss personal performance and scout upcoming opponents
+                            using
+                            data</li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- Projects -->
+            <section class="resume-section">
+                <h2>Projects</h2>
+
+                <article class="resume-entry">
+                    <resume-row>
+                        <h3>InsightOS — Machine Learning & Causal Analysis Platform</h3>
+                        <resume-meta>
+                            <time datetime="2025-08">August 2025</time>
+                        </resume-meta>
+                    </resume-row>
+                    <ul>
+                        <li>Developed a multipage FastAPI web app automating dataset exploration with executive
+                            summaries,
+                            SHAP feature importance, causal inference, and ML models to support faster, data-driven
+                            decisions</li>
+                    </ul>
+                </article>
+
+                <article class="resume-entry">
+                    <resume-row>
+                        <h3>Financial Sentiment Analysis Model — Deep Learning (PyTorch)</h3>
+                        <resume-meta>
+                            <time datetime="2025-06">June 2025</time>
+                        </resume-meta>
+                    </resume-row>
+                    <ul>
+                        <li>Designed and fine-tuned a ULMFiT-based language model in PyTorch to classify sentiment of
+                            financial news headlines and earnings call transcripts, enabling automated sentiment scoring
+                            to
+                            support stock risk analysis</li>
+                    </ul>
+                </article>
+
+                <article class="resume-entry">
+                    <resume-row>
+                        <h3>Unix Shell and Memory Simulator — C</h3>
+                        <resume-meta>
+                            <time datetime="2025-03">March 2025</time>
+                        </resume-meta>
+                    </resume-row>
+                    <ul>
+                        <li>Built a Unix shell and multi-stage memory simulator in C, implementing process control,
+                            command
+                            parsing, heap allocation, DRAM timing, and LRU-based cache</li>
+                    </ul>
+                </article>
+
+                <article class="resume-entry">
+                    <resume-row>
+                        <h3>Consult For America Case Competition — Capital One</h3>
+                        <resume-meta>
+                            <time datetime="2024-04">April 2024</time>
+                        </resume-meta>
+                    </resume-row>
+                    <ul>
+                        <li>Conducted finance analysis using Bloomberg Terminal, identifying AI opportunities and
+                            pitfalls
+                            for Capital One</li>
+                    </ul>
+                </article>
+            </section>
+
+            <!-- Leadership -->
+            <section class="resume-section">
+                <h2>Leadership & Extracurricular</h2>
+
+                <article class="resume-entry">
+                    <resume-row>
+                        <hgroup>
+                            <h3>Delta Sigma Pi — Lambda Pi Chapter</h3>
+                            <p class="resume-role">Vice President of Chapter Operations</p>
+                        </hgroup>
+                        <resume-meta>
+                            <span>San Diego, CA</span>
+                            <time datetime="2025-08">August 2025</time> – Present
+                        </resume-meta>
+                    </resume-row>
+                    <ul>
+                        <li>Built a React web app to streamline chapter operations with JSX modular UI components and
+                            state
+                            handling</li>
+                    </ul>
+                </article>
+
+                <article class="resume-entry">
+                    <resume-row>
+                        <hgroup>
+                            <p class="resume-role">Vice President of Scholarships and Awards</p>
+                        </hgroup>
+                        <resume-meta>
+                            <time datetime="2023-12">December 2023</time> – <time datetime="2024-05">May 2024</time>
+                        </resume-meta>
+                    </resume-row>
+                    <ul>
+                        <li>Led award application process, coordinated recognition programs, and promoted academic
+                            achievement</li>
+                    </ul>
+                </article>
+
+                <p class="resume-detail">Data Analytics Club · Mariachi Program Co-founder & Instructor · ACM · Student
+                    International Business Council · USD Club Golf · JV & Varsity Tennis Captain · Boys Team Charity ·
+                    FHS
+                    Engineering Academy</p>
+            </section>
+
+            <!-- Skills -->
+            <section class="resume-section">
+                <h2>Additional Information</h2>
+                <dl class="resume-skills">
+                    <dt>Skills</dt>
+                    <dd>Python · Java · R · TypeScript · SQL · C++ · Tableau · PowerBI · Machine Learning · Automation ·
+                        Microsoft Office</dd>
+                    <dt>Interests</dt>
+                    <dd>Boston Red Sox & Celtics · Golf · Drones · Sabermetrics · 3D Printing · Skiing · Maps ·
+                        Weightlifting · Formula 1</dd>
+                </dl>
+            </section>
+
+        </article>
+    </main>
     <footer>
         <p>&copy; 2025 Cameron McNamara</p>
         <ul role="list">
             <li><a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/YOUR_PROFILE" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://linkedin.com/in/cameronmcnamara" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
     </footer>
 </body>
