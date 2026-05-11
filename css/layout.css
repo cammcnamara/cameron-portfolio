@@ -43,10 +43,17 @@ nav a[aria-current="page"] {
 }
 
 main {
-    max-width: var(--max-width);
     width: 100%;
+    box-sizing: border-box;
+    max-width: var(--max-width);
     margin-inline: auto;
     padding: var(--size-8) var(--page-padding);
+}
+
+main>article,
+main article {
+    width: 100%;
+    box-sizing: border-box;
 }
 
 footer {
@@ -57,7 +64,7 @@ footer {
     margin-inline: auto;
     padding: var(--size-4) var(--page-padding);
     color: var(--color-text-muted);
-    font-size: var(--font-size-1);
+    font-size: var(--font-size-0);
 }
 
 footer ul {
@@ -75,4 +82,10 @@ footer a {
 
 footer a:hover {
     color: var(--color-accent);
+
+}
+
+footer p {
+    margin: 0;
+    padding-inline-end: var(--size-4);
 }
