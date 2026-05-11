@@ -1,0 +1,203 @@
+/* ── Custom element defaults ─────────────────── */
+resume-row,
+resume-meta,
+resume-contact {
+    display: block;
+}
+
+/* ── Wrapper ─────────────────────────────────── */
+.resume {
+    width: 70%;
+    box-sizing: border-box;
+    margin-inline: auto;
+}
+
+/* ── Header ──────────────────────────────────── */
+.resume-header {
+    width: 100%;
+    text-align: center;
+    padding-block-end: var(--size-4);
+    margin-block-end: var(--size-4);
+    border-bottom: var(--border-size-2) solid var(--color-border);
+    box-sizing: border-box;
+}
+
+.resume-header h1 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: var(--font-size-6);
+    font-weight: var(--font-weight-9);
+    letter-spacing: -0.02em;
+    margin: 0 0 var(--size-2);
+}
+
+resume-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--size-1) var(--size-4);
+    font-size: var(--font-size-0);
+    color: var(--color-text-muted);
+    margin-block-end: var(--size-3);
+}
+
+resume-contact a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+resume-contact a:hover {
+    text-decoration: underline;
+}
+
+.resume-download {
+    display: inline-block;
+    padding: var(--size-1) var(--size-4);
+    background: var(--color-accent);
+    color: #fff;
+    text-decoration: none;
+    border-radius: var(--radius-2);
+    font-size: var(--font-size-0);
+    font-weight: var(--font-weight-6);
+    transition: opacity var(--transition);
+}
+
+.resume-download:hover {
+    opacity: 0.85;
+}
+
+/* ── Sections ────────────────────────────────── */
+.resume-section {
+    width: 100%;
+    box-sizing: border-box;
+    margin-block-end: var(--size-4);
+    padding-block-start: var(--size-3);
+    border-top: var(--border-size-2) solid var(--color-border);
+}
+
+.resume-section>h2 {
+    font-size: var(--font-size-0);
+    font-weight: var(--font-weight-7);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+    margin: 0 0 var(--size-3);
+    padding: 0;
+    border: none;
+}
+
+/* ── Entries ─────────────────────────────────── */
+.resume-entry {
+    width: 100%;
+    box-sizing: border-box;
+    padding-block-end: var(--size-2);
+    margin-block-end: var(--size-2);
+}
+
+.resume-entry+.resume-entry {
+    border-top: var(--border-size-1) solid var(--color-border);
+    padding-block-start: var(--size-2);
+}
+
+.resume-entry:last-of-type {
+    padding-block-end: 0;
+    margin-block-end: 0;
+}
+
+/* ── Row ─────────────────────────────────────── */
+resume-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--size-4);
+    width: 100%;
+    box-sizing: border-box;
+    margin-block-end: var(--size-1);
+}
+
+resume-row>h3 {
+    flex: 1 1 auto;
+    min-width: 0;
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-7);
+    margin: 0;
+    color: var(--color-text);
+}
+
+resume-meta {
+    flex-shrink: 0;
+    font-size: var(--font-size-0);
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    text-align: right;
+}
+
+/* ── Text ────────────────────────────────────── */
+.resume-role {
+    font-size: var(--font-size-0);
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0 0 var(--size-1);
+}
+
+.resume-detail {
+    font-size: var(--font-size-0);
+    color: var(--color-text-muted);
+    line-height: var(--font-lineheight-3);
+    margin: 0;
+}
+
+/* ── Lists ───────────────────────────────────── */
+.resume-entry ul {
+    width: 100%;
+    box-sizing: border-box;
+    margin: var(--size-1) 0 0;
+    padding-inline-start: var(--size-4);
+}
+
+.resume-entry li {
+    display: list-item;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: var(--font-size-0);
+    line-height: var(--font-lineheight-3);
+    margin-block-end: var(--size-1);
+    color: var(--color-text);
+}
+
+/* ── Skills ──────────────────────────────────── */
+.resume-skills {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--size-1) var(--size-4);
+    font-size: var(--font-size-0);
+    width: 100%;
+}
+
+.resume-skills dt {
+    font-weight: var(--font-weight-7);
+    color: var(--color-text);
+}
+
+.resume-skills dd {
+    margin: 0;
+    color: var(--color-text-muted);
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 640px) {
+    resume-row {
+        flex-direction: column;
+        gap: var(--size-1);
+    }
+
+    resume-meta {
+        white-space: normal;
+        text-align: left;
+    }
+
+    .resume-skills {
+        grid-template-columns: 1fr;
+    }
+}
