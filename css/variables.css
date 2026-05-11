@@ -1,0 +1,13 @@
+:root {
+    --color-bg: var(--gray-0);
+    --color-surface: var(--gray-1);
+    --color-text: var(--gray-9);
+    --color-text-muted: var(--gray-6);
+    --color-accent: var(--blue-6);
+    --color-border: var(--gray-3);
+
+    --nav-height: 4rem;
+    --max-width: 72rem;
+    --page-padding: var(--size-4);
+    --transition: 200ms var(--ease-2);
+}
