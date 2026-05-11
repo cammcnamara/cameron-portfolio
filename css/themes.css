@@ -52,18 +52,6 @@
     --color-shadow: var(--shadow-4);
 }
 
-/* ── FOREST (deep green) ──────────────────────── */
-.forest {
-    --color-bg: var(--green-12);
-    --color-surface: var(--green-11);
-    --color-surface-2: var(--green-10);
-    --color-text: var(--lime-0);
-    --color-text-muted: var(--lime-4);
-    --color-accent: var(--lime-4);
-    --color-accent-light: var(--green-11);
-    --color-border: var(--green-9);
-    --color-shadow: var(--shadow-4);
-}
 
 /* ── HIGH CONTRAST ────────────────────────────── */
 .contrast {
@@ -77,9 +65,6 @@
     --color-border: #fff;
     --color-shadow: var(--shadow-6);
 }
-
-
-css
 
 /* ── RETRO (phosphor terminal) ───────────────── */
 .retro {
@@ -111,18 +96,6 @@ css
     --color-shadow: var(--shadow-2);
 }
 
-/* ── ACADEMIC (university library) ───────────── */
-.academic {
-    --color-bg: #f8f4ec;
-    --color-surface: #f0ead8;
-    --color-surface-2: #e8dfc8;
-    --color-text: #1a1a2e;
-    --color-text-muted: #4a4a6a;
-    --color-accent: #8b1a2e;
-    --color-accent-light: #f5e6ea;
-    --color-border: #c8b89a;
-    --color-shadow: var(--shadow-2);
-}
 
 /* ── RED SOX ──────────────────────────────────── */
 .redsox {
@@ -134,5 +107,18 @@ css
     --color-accent: #bd3039;
     --color-accent-light: #2a0a0d;
     --color-border: #1e4d8c;
+    --color-shadow: var(--shadow-4);
+}
+
+/* ── Boston Bruins ─────────── */
+.bruins {
+    --color-bg: #000000;
+    --color-surface: #1c1c1c;
+    --color-surface-2: #333333;
+    --color-text: #ffb81c;
+    --color-text-muted: #7a5c00;
+    --color-accent: #ffb81c;
+    --color-accent-light: #4d3700;
+    --color-border: #7a5c00;
     --color-shadow: var(--shadow-4);
 }
