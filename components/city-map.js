@@ -1,24 +1,59 @@
 class CityMap extends HTMLElement {
     connectedCallback() {
-        this.token = 'YOUR_MAPBOX_TOKEN';
-        this.defaultLat = 47.6062;
-        this.defaultLon = -122.3321;
+        this.lat = 47.6062;
+        this.lon = -122.3321;
+        this.cityName = 'Seattle, WA';
         this.render();
-        this.initMap();
+        this.loadLeaflet().then(() => this.initMap());
 
         document.addEventListener('city-selected', e => {
             const { latitude, longitude, name, country } = e.detail;
-            this.map.flyTo({
-                center: [longitude, latitude],
-                zoom: 10,
-                essential: true
-            });
-            new mapboxgl.Marker({ color: 'var(--color-accent)' })
-                .setLngLat([longitude, latitude])
-                .setPopup(new mapboxgl.Popup().setHTML(`<strong>${name}, ${country}</strong>`))
-                .addTo(this.map)
-                .togglePopup();
+            this.lat = latitude;
+            this.lon = longitude;
+            this.cityName = `${name}, ${country}`;
+            this.updateMap();
         });
+    }
+
+    async loadLeaflet() {
+        if (window.L) return;
+
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+        document.head.appendChild(link);
+
+        await new Promise(resolve => {
+            const script = document.createElement('script');
+            script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+            script.onload = resolve;
+            document.head.appendChild(script);
+        });
+    }
+
+    initMap() {
+        this.map = L.map(this.querySelector('#map-container'), {
+            center: [this.lat, this.lon],
+            zoom: 10,
+            zoomControl: true,
+        });
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'OpenStreetMap'
+        }).addTo(this.map);
+
+        this.marker = L.marker([this.lat, this.lon])
+            .addTo(this.map)
+            .bindPopup(`<strong>${this.cityName}</strong>`)
+            .openPopup();
+    }
+
+    updateMap() {
+        if (!this.map) return;
+        this.map.flyTo([this.lat, this.lon], 10);
+        this.marker.setLatLng([this.lat, this.lon])
+            .setPopupContent(`<strong>${this.cityName}</strong>`)
+            .openPopup();
     }
 
     render() {
@@ -61,52 +96,23 @@ class CityMap extends HTMLElement {
                         color: var(--color-text-muted, #666);
                     }
 
-                    #map {
+                    #map-container {
                         width: 100%;
                         height: 300px;
                         border-radius: var(--radius-2, 0.5rem);
                         overflow: hidden;
+                        z-index: 0;
                     }
                 </style>
 
                 <header class="map-card__header">
-                    <h2>🗺️ City Map</h2>
-                    <span class="map-card__badge">Mapbox</span>
+                    <h2>City Map</h2>
+                    <span class="map-card__badge">OpenStreetMap</span>
                 </header>
 
-                <section id="map"></section>
+                <section id="map-container"></section>
             </article>
         `;
-    }
-
-    initMap() {
-        // Load Mapbox GL JS dynamically
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = 'https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.css';
-        document.head.appendChild(link);
-
-        const script = document.createElement('script');
-        script.src = 'https://api.mapbox.com/mapbox-gl-js/v3.3.0/mapbox-gl.js';
-        script.onload = () => {
-            mapboxgl.accessToken = this.token;
-            this.map = new mapboxgl.Map({
-                container: this.querySelector('#map'),
-                style: 'mapbox://styles/mapbox/dark-v11',
-                center: [this.defaultLon, this.defaultLat],
-                zoom: 9
-            });
-
-            // Default marker on Seattle
-            new mapboxgl.Marker({ color: '#3b82f6' })
-                .setLngLat([this.defaultLon, this.defaultLat])
-                .setPopup(new mapboxgl.Popup().setHTML('<strong>Seattle, WA</strong><br>BlackRock · Starting 2026'))
-                .addTo(this.map)
-                .togglePopup();
-
-            this.map.addControl(new mapboxgl.NavigationControl());
-        };
-        document.head.appendChild(script);
     }
 }
 

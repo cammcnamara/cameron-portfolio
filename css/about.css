@@ -2,7 +2,7 @@ h1 {
     font-size: var(--font-size-fluid-2);
     font-weight: var(--font-weight-9);
     margin: 0 0 var(--size-2);
-    color: var(--color-text);
+    color: var(--color-accent);
 }
 
 .page-sub {
@@ -77,15 +77,14 @@ h1 {
 
 .city-search {
     display: flex;
-    gap: var(--size-2);
+    gap: var(--size-1);
     align-items: center;
     max-width: 32rem;
     margin-inline: auto;
-    margin-block-end: var(--size-8);
     background: var(--color-surface);
     border: var(--border-size-1) solid var(--color-border);
     border-radius: var(--radius-round);
-    padding: var(--size-2) var(--size-2) var(--size-2) var(--size-4);
+    padding: var(--size-1);
     transition: border-color 200ms var(--ease-2), box-shadow 200ms var(--ease-2);
 }
 

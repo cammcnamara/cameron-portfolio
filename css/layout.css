@@ -89,6 +89,7 @@ footer a:hover {
 footer p {
     margin: 0;
     padding-inline-end: var(--size-4);
+
 }
 
 .nav-toggle {

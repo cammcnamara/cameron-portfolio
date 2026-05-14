@@ -106,8 +106,8 @@ class MlbScores extends HTMLElement {
 
                     .mlb-card button {
                         align-self: flex-start;
-                        background: #0d2b56;
-                        color: #fff;
+                        background: var(--color-surface-2, #f0f0f0);
+                        color: var(--color-text, #111);
                         border: none;
                         border-radius: 999px;
                         padding: 0.5rem 0.5rem;
