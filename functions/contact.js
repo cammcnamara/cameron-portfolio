@@ -19,7 +19,7 @@ export async function onRequestPost(context) {
         },
         body: JSON.stringify({
             from: 'Portfolio <onboarding@resend.dev>',
-            to: 'cameronmcnamara@sandiego.edu',
+            to: 'cameronmcnamara04@gmail.com',
             subject: `New message from ${name}`,
             text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
         })
