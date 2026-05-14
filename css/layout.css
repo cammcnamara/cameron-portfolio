@@ -102,9 +102,6 @@ footer p {
     margin-inline-start: auto;
 }
 
-label[for="theme-select"] {
-    display: none;
-}
 
 @media (max-width: 700px) {
     nav {
@@ -136,9 +133,12 @@ label[for="theme-select"] {
         display: flex;
     }
 
-    label[for="theme-select"] {
-        display: block;
-        margin-left: auto;
-        margin-top: var(--size-2);
+    #theme-select {
+        font-size: var(--font-size-1);
+        padding: var(--size-1);
+        border: var(--border-size-1) solid var(--color-border);
+        border-radius: var(--radius-2);
     }
+
+
 }
