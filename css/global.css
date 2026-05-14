@@ -42,7 +42,7 @@ html {
     padding: var(--size-2) var(--size-3);
     border-radius: var(--radius-2);
     opacity: 0;
-    animation: hint-fade 4s var(--ease-2) forwards;
+    animation: hint-fade 6s var(--ease-2) forwards;
 }
 
 @keyframes hint-fade {
