@@ -18,6 +18,7 @@
 
     <script src="/js/theme-switcher.js" defer></script>
     <script type="module" src="/components/mlb-scores.js"></script>
+    <script type="module" src="/components/stock-ticker.js"></script>
     <script src="/js/nav.js" defer></script>
 
 </head>
@@ -86,11 +87,12 @@
             <!-- Widget 2: description left, widget right -->
             <article class="widget-row widget-row--flip">
                 <section class="widget-desc">
-                    <h3>Widget 2 Title</h3>
-                    <p>Description of why this widget relates to you and what it shows.</p>
+                    <h3>Stock Ticker</h3>
+                    <p>This widget shows the current stock prices and market trends. It helps investors stay updated
+                        with the latest financial information.</p>
                 </section>
                 <section class="widget-slot">
-                    <!-- second component goes here -->
+                    <stock-ticker></stock-ticker>
                 </section>
             </article>
 
