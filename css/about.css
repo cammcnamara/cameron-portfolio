@@ -75,6 +75,57 @@ h1 {
     margin: 0;
 }
 
+.city-search {
+    display: flex;
+    gap: var(--size-2);
+    align-items: center;
+    max-width: 32rem;
+    margin-inline: auto;
+    margin-block-end: var(--size-8);
+    background: var(--color-surface);
+    border: var(--border-size-1) solid var(--color-border);
+    border-radius: var(--radius-round);
+    padding: var(--size-2) var(--size-2) var(--size-2) var(--size-4);
+    transition: border-color 200ms var(--ease-2), box-shadow 200ms var(--ease-2);
+}
+
+.city-search:focus-within {
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-2);
+}
+
+.city-search input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font: inherit;
+    font-size: var(--font-size-1);
+    color: var(--color-text);
+    outline: none;
+}
+
+.city-search input::placeholder {
+    color: var(--color-text-muted);
+}
+
+.city-search button {
+    background: var(--color-accent);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-round);
+    padding: var(--size-2) var(--size-5);
+    font: inherit;
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-6);
+    cursor: pointer;
+    transition: opacity 200ms var(--ease-2);
+    white-space: nowrap;
+}
+
+.city-search button:hover {
+    opacity: 0.85;
+}
+
 /* ── Responsive ──────────────────────────────── */
 @media (max-width: 768px) {
     .widget-row {

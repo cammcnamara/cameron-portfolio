@@ -19,6 +19,10 @@
     <script src="/js/theme-switcher.js" defer></script>
     <script type="module" src="/components/mlb-scores.js"></script>
     <script type="module" src="/components/stock-ticker.js"></script>
+    <script type="module" src="/components/weather.js"></script>
+    <script type="module" src="/components/city-search.js"></script>
+    <script type="module" src="/components/city-map.js"></script>
+
     <script src="/js/nav.js" defer></script>
 
 </head>
@@ -96,25 +100,32 @@
                 </section>
             </article>
 
+            <section class="city-search">
+                <input type="text" id="city-input" placeholder="Search a city..." aria-label="Search a city" />
+                <button type="button" id="city-search-btn">Search</button>
+            </section>
+
             <!-- Widget 3: widget left, description right -->
             <article class="widget-row">
                 <section class="widget-slot">
-                    <!-- third component goes here -->
+                    <city-map></city-map>
                 </section>
                 <section class="widget-desc">
-                    <h3>Widget 3 Title</h3>
-                    <p>Description of why this widget relates to you and what it shows.</p>
+                    <h3>City Map</h3>
+                    <p>This widget displays a map of the selected city, allowing users to explore its geography and
+                        landmarks.</p>
                 </section>
             </article>
 
             <!-- Widget 4: description left, widget right -->
             <article class="widget-row widget-row--flip">
                 <section class="widget-desc">
-                    <h3>Widget 4 Title</h3>
-                    <p>Description of why this widget relates to you and what it shows.</p>
+                    <h3>City Weather</h3>
+                    <p>This widget shows the current weather conditions for the selected city, including temperature,
+                        humidity, and wind speed.</p>
                 </section>
                 <section class="widget-slot">
-                    <!-- fourth component goes here -->
+                    <city-weather></city-weather>
                 </section>
             </article>
 

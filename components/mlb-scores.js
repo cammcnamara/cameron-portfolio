@@ -176,7 +176,7 @@ class MlbScores extends HTMLElement {
             }
 
             // Show most recent 5
-            const recent = games.slice(-5).reverse();
+            const recent = games.slice(-3).reverse();
 
             this.scoresList.innerHTML = recent.map(game => {
                 const away = game.teams.away;
