@@ -5,6 +5,7 @@ body {
     min-block-size: 100dvh;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    overflow-x: hidden;
 }
 
 nav {
@@ -101,7 +102,7 @@ footer p {
     margin-inline-start: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     nav {
         flex-wrap: wrap;
         position: relative;
