@@ -17,31 +17,35 @@
     <link rel="stylesheet" href="/css/resume.css" />
 
     <script src="/js/theme-switcher.js" defer></script>
+    <script src="/js/nav.js" defer></script>
 </head>
 
 <body>
     <header>
         <nav>
             <a href="/" class="nav-logo">Cameron McNamara</a>
-            <ul role="list">
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul role="list" id="nav-menu">
                 <li><a href="/">Home</a></li>
-                <li><a href="/resume.html" aria-current="page">Resume</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/resume.html">Resume</a></li>
                 <li><a href="/projects.html">Projects</a></li>
                 <li><a href="/contact.html">Contact</a></li>
             </ul>
-            <label for="theme-select" class="sr-only">Choose theme</label>
             <select id="theme-select">
-                <optgroup label="Theme:">
-                    <option value="">Light</option>
-                    <option value="dark">Dark</option>
-                    <option value="warm">Warm</option>
-                    <option value="ocean">Ocean</option>
-                    <option value="contrast">High Contrast</option>
-                    <option value="retro">Retro</option>
-                    <option value="western">Western</option>
-                    <option value="redsox">Boston Red Sox</option>
-                    <option value="bruins">Boston Bruins</option>
-                </optgroup>
+                <option value="">Light</option>
+                <option value="dark">Dark</option>
+                <option value="warm">Warm</option>
+                <option value="ocean">Ocean</option>
+                <option value="contrast">High Contrast</option>
+                <option value="retro">Retro</option>
+                <option value="western">Western</option>
+                <option value="redsox">Boston Red Sox</option>
+                <option value="bruins">Boston Bruins</option>
             </select>
         </nav>
     </header>
