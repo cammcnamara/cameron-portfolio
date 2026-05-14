@@ -78,7 +78,7 @@ class MlbScores extends HTMLElement {
                         display: flex;
                         justify-content: space-between;
                         gap: var(--size-6, 1.5rem);
-                        width: 16rem;
+                        width: 14rem;
                     }
 
                     .mlb-game__team.winner {
