@@ -110,7 +110,8 @@ class MlbScores extends HTMLElement {
                         color: #fff;
                         border: none;
                         border-radius: 999px;
-                        padding: 0.5rem 1rem;
+                        padding: 0.5rem 0.5rem;
+                        margin-right: var(--size-4, 1rem);
                         font: inherit;
                         font-size: var(--font-size-0, 0.75rem);
                         font-weight: var(--font-weight-7, 700);
