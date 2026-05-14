@@ -35,7 +35,7 @@ html {
 .theme-hint {
     position: absolute;
     top: 10%;
-    right: var(--page-padding);
+    right: 10%;
     background: var(--color-text);
     color: var(--color-bg);
     font-size: var(--font-size-0);
