@@ -102,6 +102,10 @@ footer p {
     margin-inline-start: auto;
 }
 
+label[for="theme-select"] {
+    display: none;
+}
+
 @media (max-width: 700px) {
     nav {
         flex-wrap: wrap;
@@ -133,6 +137,8 @@ footer p {
     }
 
     label[for="theme-select"] {
-        margin-inline-start: 0;
+        display: block;
+        margin-left: auto;
+        margin-top: var(--size-2);
     }
 }
