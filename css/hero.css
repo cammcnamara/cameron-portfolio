@@ -99,3 +99,36 @@ body::before {
     gap: var(--size-5);
     margin-top: var(--size-4);
 }
+
+.theme-hint {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    background: var(--color-text);
+    color: var(--color-bg);
+    font-size: var(--font-size-0);
+    padding: var(--size-2) var(--size-3);
+    border-radius: var(--radius-2);
+    opacity: 0;
+    animation: hint-fade 6s var(--ease-2) forwards;
+}
+
+@keyframes hint-fade {
+    0% {
+        opacity: 0;
+        translate: 0 -4px;
+    }
+
+    15% {
+        opacity: 1;
+        translate: 0 0;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
