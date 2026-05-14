@@ -125,6 +125,12 @@ h1 {
     opacity: 0.85;
 }
 
+.city-search-error {
+    text-align: center;
+    color: var(--red-6, #dc2626);
+    font-size: var(--font-size-0);
+}
+
 /* ── Responsive ──────────────────────────────── */
 @media (max-width: 768px) {
     .widget-row {

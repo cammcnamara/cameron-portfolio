@@ -130,7 +130,7 @@ class MlbScores extends HTMLElement {
                 </style>
 
                 <header class="mlb-card__header">
-                    <h2>⚾ Red Sox Results</h2>
+                    <h2>Red Sox Scores</h2>
                     <span class="mlb-card__badge">MLB</span>
                 </header>
 

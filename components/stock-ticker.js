@@ -135,7 +135,7 @@ class StockTicker extends HTMLElement {
                 </style>
 
                 <header class="stock-card__header">
-                    <h2>📈 Watchlist</h2>
+                    <h2>Watchlist</h2>
                     <span class="stock-card__badge">Live</span>
                 </header>
 

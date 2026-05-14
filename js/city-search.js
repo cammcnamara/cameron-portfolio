@@ -1,24 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
     const input = document.getElementById('city-input');
     const btn = document.getElementById('city-search-btn');
+    const error = document.getElementById('city-search-error');
 
     async function search() {
         const city = input.value.trim();
         if (!city) return;
 
-        const res = await fetch(
-            `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=1`
-        );
-        const data = await res.json();
+        error.hidden = true;
+        btn.textContent = 'Searching...';
+        btn.disabled = true;
 
-        if (!data.results?.length) return;
+        try {
+            const res = await fetch(
+                `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=1`
+            );
+            const data = await res.json();
 
-        const { latitude, longitude, name, country } = data.results[0];
+            if (!data.results?.length) {
+                error.hidden = false;
+                return;
+            }
 
-        // Fire a custom event both components listen for
-        document.dispatchEvent(new CustomEvent('city-selected', {
-            detail: { latitude, longitude, name, country }
-        }));
+            const { latitude, longitude, name, country } = data.results[0];
+            document.dispatchEvent(new CustomEvent('city-selected', {
+                detail: { latitude, longitude, name, country }
+            }));
+
+        } catch (err) {
+            error.hidden = false;
+            console.error(err);
+        } finally {
+            btn.textContent = 'Search';
+            btn.disabled = false;
+        }
     }
 
     btn.addEventListener('click', search);
