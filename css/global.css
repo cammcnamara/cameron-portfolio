@@ -30,3 +30,47 @@ h6 {
 html {
     overflow-x: hidden;
 }
+
+
+.theme-hint {
+    position: absolute;
+    top: calc(100% + var(--size-2));
+    right: var(--page-padding);
+    background: var(--color-text);
+    color: var(--color-bg);
+    font-size: var(--font-size-0);
+    padding: var(--size-2) var(--size-3);
+    border-radius: var(--radius-2);
+    white-space: nowrap;
+    pointer-events: none;
+    animation: hint-fade 4s var(--ease-2) forwards;
+}
+
+.theme-hint::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    right: var(--size-4);
+    border: 5px solid transparent;
+    border-bottom-color: var(--color-text);
+}
+
+@keyframes hint-fade {
+    0% {
+        opacity: 0;
+        transform: translate(0, -4px);
+    }
+
+    15% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
