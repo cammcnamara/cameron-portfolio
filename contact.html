@@ -11,10 +11,10 @@
         if (t) document.documentElement.className = t;
     </script>
 
-    <link rel="stylesheet" href="https://unpkg.com/open-props" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/open-props.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/open-props/normalize.min.css" />
     <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/themes.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
 
     <script src="/js/theme-switcher.js" defer></script>
 </head>
@@ -29,33 +29,56 @@
                 <li><a href="/projects.html">Projects</a></li>
                 <li><a href="/contact.html" aria-current="page">Contact</a></li>
             </ul>
-            <label for="theme-select" class="sr-only">Choose theme</label>
             <select id="theme-select">
                 <option value="">Light</option>
                 <option value="dark">Dark</option>
                 <option value="warm">Warm</option>
                 <option value="ocean">Ocean</option>
-                <option value="forest">Forest</option>
                 <option value="contrast">High Contrast</option>
                 <option value="retro">Retro</option>
                 <option value="western">Western</option>
-                <option value="academic">Academic</option>
                 <option value="redsox">Red Sox</option>
+                <option value="patriots">Patriots</option>
             </select>
         </nav>
     </header>
 
     <main id="main-content">
-        <!-- Contact form goes here -->
+        <section class="contact-wrapper">
+            <h1>Get in Touch</h1>
+            <p class="page-sub">Have a question or want to connect? Send me a message.</p>
+
+            <!-- Success message — hidden unless ?success=true -->
+            <p class="contact-success" id="contact-success" hidden>
+                Message sent! I'll get back to you soon.
+            </p>
+
+            <form class="contact-form" action="/contact" method="POST" novalidate>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required autocomplete="name" placeholder="Example Name" />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email"
+                    placeholder="example@email.com" />
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required rows="6"
+                    placeholder="Include a reason for contact"></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Cameron McNamara</p>
+        <small>&copy; 2025 Cameron McNamara</small>
         <ul role="list">
             <li><a href="https://github.com/cammcnamara" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/cameronmcnamara/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://linkedin.com/in/cameronmcnamara" target="_blank" rel="noopener">LinkedIn</a></li>
         </ul>
     </footer>
+
+    <script src="/js/contact.js" defer></script>
 </body>
 
 </html>

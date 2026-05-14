@@ -1,14 +1,37 @@
+/* ── Reset custom element ────────────────────── */
+project-footer {
+    display: block;
+}
+
+/* ── Page header ─────────────────────────────── */
+h1 {
+    font-size: var(--font-size-fluid-2);
+    font-weight: var(--font-weight-9);
+    margin: 0 0 var(--size-2);
+    color: var(--color-text);
+}
+
+.page-sub {
+    font-size: var(--font-size-2);
+    color: var(--color-text-muted);
+    margin: 0 0 var(--size-6);
+}
+
+/* ── Project list ────────────────────────────── */
 .projects-list {
     display: flex;
     flex-direction: column;
     gap: var(--size-4);
-    margin-block-start: var(--size-6);
 }
 
+/* ── Card ────────────────────────────────────── */
 .project-card {
     padding: var(--size-4) var(--size-5);
     border-left: 3px solid var(--color-border);
     transition: border-color 200ms var(--ease-2), transform 200ms var(--ease-2);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-3);
 }
 
 .project-card:hover {
@@ -19,47 +42,61 @@
 .project-card h3 {
     font-size: var(--font-size-2);
     font-weight: var(--font-weight-7);
-    margin: 0 0 var(--size-1);
+    margin: 0;
     color: var(--color-text);
 }
 
-.project-card p {
+.project-card>p {
     font-size: var(--font-size-1);
     color: var(--color-text-muted);
     line-height: var(--font-lineheight-4);
-    margin: 0 0 var(--size-3);
+    margin: 0;
+    flex: 1;
 }
 
-.project-tags {
+/* ── Footer ──────────────────────────────────── */
+project-footer {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    gap: var(--size-4);
 }
 
-.project-tags ul {
+project-footer ul {
     display: flex;
     flex-wrap: wrap;
     gap: var(--size-2);
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
-.project-tags li {
+project-footer li {
+    display: inline-block !important;
     font-size: var(--font-size-0);
     color: var(--color-accent);
     border: var(--border-size-1) solid var(--color-accent);
     padding: 2px var(--size-2);
     border-radius: var(--radius-round);
+    width: auto !important;
 }
 
-.project-tags a {
+project-footer a {
     font-size: var(--font-size-0);
     font-weight: var(--font-weight-6);
     color: var(--color-accent);
     text-decoration: none;
+    white-space: nowrap;
 }
 
-.project-tags a:hover {
+project-footer a:hover {
     text-decoration: underline;
+}
+
+/* ── Stacked links (Spotify) ─────────────────── */
+.project-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--size-1);
 }

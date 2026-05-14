@@ -11,10 +11,9 @@
         if (t) document.documentElement.className = t;
     </script>
 
-    <link rel="stylesheet" href="https://unpkg.com/open-props" />
+    <link rel="stylesheet" href="https://unpkg.com/open-props/open-props.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/open-props/normalize.min.css" />
     <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/themes.css" />
     <link rel="stylesheet" href="/css/projects.css" />
 
     <script src="/js/theme-switcher.js" defer></script>
@@ -30,7 +29,6 @@
                 <li><a href="/projects.html" aria-current="page">Projects</a></li>
                 <li><a href="/contact.html">Contact</a></li>
             </ul>
-            <label for="theme-select" class="sr-only">Choose theme</label>
             <select id="theme-select">
                 <option value="">Light</option>
                 <option value="dark">Dark</option>
@@ -39,8 +37,8 @@
                 <option value="contrast">High Contrast</option>
                 <option value="retro">Retro</option>
                 <option value="western">Western</option>
-                <option value="redsox">Boston Red Sox</option>
-                <option value="bruins">Boston Bruins</option>
+                <option value="redsox">Red Sox</option>
+                <option value="patriots">Patriots</option>
             </select>
         </nav>
     </header>
@@ -55,7 +53,7 @@
                 <h3>InsightOS — ML & Causal Analysis Platform</h3>
                 <p>Multipage FastAPI app automating dataset exploration with SHAP explainability, causal inference, and
                     executive summaries to support faster data-driven decisions.</p>
-                <footer class="project-tags">
+                <project-footer>
                     <ul role="list">
                         <li>Python</li>
                         <li>FastAPI</li>
@@ -63,15 +61,14 @@
                         <li>ML</li>
                     </ul>
                     <a href="https://github.com/cammcnamara/InsightOS" target="_blank" rel="noopener">View →</a>
-                </footer>
+                </project-footer>
             </article>
 
             <article class="project-card">
                 <h3>Toxic Comment Classifier — NLP</h3>
                 <p>Multi-label NLP classification on the Kaggle Jigsaw dataset using logistic regression, SVM, Bi-LSTM,
-                    and CNN
-                    models with exploration of BERT transformers.</p>
-                <footer class="project-tags">
+                    and CNN models with exploration of BERT transformers.</p>
+                <project-footer>
                     <ul role="list">
                         <li>Python</li>
                         <li>NLP</li>
@@ -80,17 +77,15 @@
                     </ul>
                     <a href="https://github.com/cammcnamara/Toxic-Comment-Classifier" target="_blank"
                         rel="noopener">View →</a>
-                </footer>
+                </project-footer>
             </article>
 
             <article class="project-card">
                 <h3>Spotify Analytics Suite</h3>
                 <p>Two-part project exploring music data: a popularity predictor using audio features across linear
-                    regression,
-                    ridge, GAMs, and XGBoost; and a deeper data exploration and visualization pipeline analyzing trends
-                    across
+                    regression, ridge, GAMs, and XGBoost; and a deeper exploration pipeline analyzing trends across
                     genres, artists, and audio characteristics.</p>
-                <footer class="project-tags">
+                <project-footer>
                     <ul role="list">
                         <li>R</li>
                         <li>XGBoost</li>
@@ -98,34 +93,29 @@
                         <li>Data Viz</li>
                     </ul>
                     <a href="https://github.com/cammcnamara/Spotify-Popularity-Predictor" target="_blank"
-                        rel="noopener">Predictor
-                        →</a>
-                    <a href="https://github.com/cammcnamara/spotify" target="_blank" rel="noopener">Analysis →</a>
-                </footer>
+                        rel="noopener">View →</a>
+                    <!-- <a href="https://github.com/cammcnamara/spotify" target="_blank" rel="noopener">Analysis →</a> -->
+                </project-footer>
             </article>
 
             <article class="project-card">
                 <h3>Unix Shell & Memory Simulator — C</h3>
                 <p>Built a Unix shell and multi-stage memory simulator implementing process control, heap allocation,
-                    DRAM
-                    timing, and LRU cache in C.</p>
-                <footer class="project-tags">
+                    DRAM timing, and LRU cache in C.</p>
+                <project-footer>
                     <ul role="list">
                         <li>C</li>
                         <li>Systems</li>
                         <li>OS</li>
                     </ul>
-                    <a href="#" target="_blank" rel="noopener">View
-                        →</a>
-                </footer>
+                </project-footer>
             </article>
 
             <article class="project-card">
                 <h3>USD Baseball Analytics</h3>
                 <p>R/ShinyApp web app to analyze and display pitching data across 40+ D1 games using Trackman, Rapsodo,
-                    and
-                    TruMedia.</p>
-                <footer class="project-tags">
+                    and TruMedia.</p>
+                <project-footer>
                     <ul role="list">
                         <li>R</li>
                         <li>ShinyApp</li>
@@ -133,43 +123,40 @@
                     </ul>
                     <a href="https://github.com/cammcnamara/BaseballPitchingApp" target="_blank" rel="noopener">View
                         →</a>
-                </footer>
+                </project-footer>
             </article>
 
             <article class="project-card">
                 <h3>TAM Forecast Automation — Cisco</h3>
                 <p>Automated pipeline using TypeScript to detect, compare, and export forecast Excel files from
-                    SharePoint
-                    into Tableau-connected sheets.</p>
-                <footer class="project-tags">
+                    SharePoint into Tableau-connected sheets.</p>
+                <project-footer>
                     <ul role="list">
                         <li>TypeScript</li>
                         <li>Tableau</li>
                         <li>Automation</li>
                     </ul>
-                    <a href="#" target="_blank" rel="noopener"></a>
-                </footer>
+                </project-footer>
             </article>
 
             <article class="project-card">
                 <h3>Consult For America — Capital One</h3>
                 <p>Finance analysis using Bloomberg Terminal identifying AI opportunities and strategic risks for
-                    Capital
-                    One in a national case competition.</p>
-                <footer class="project-tags">
+                    Capital One in a national case competition.</p>
+                <project-footer>
                     <ul role="list">
                         <li>Bloomberg</li>
                         <li>Finance</li>
                         <li>Strategy</li>
                     </ul>
-                </footer>
+                </project-footer>
             </article>
 
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Cameron McNamara</p>
+        <small>&copy; 2025 Cameron McNamara</small>
         <ul role="list">
             <li><a href="https://github.com/cammcnamara" target="_blank" rel="noopener">GitHub</a></li>
             <li><a href="https://linkedin.com/in/cameronmcnamara" target="_blank" rel="noopener">LinkedIn</a></li>
